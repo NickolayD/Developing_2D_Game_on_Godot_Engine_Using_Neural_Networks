@@ -19,7 +19,7 @@ Godot Engine.
 # Этапы выполнения работы
 ## 1. Изучение литературы по теме работы:
 Ниже представлен список основных источников информации, которые были использованы при выполнении данного проекта:
-- [Generative Adversarial Nets] (https://arxiv.org/abs/1406.2661);
+- ![Generative Adversarial Nets] (https://arxiv.org/abs/1406.2661);
 - [Attention Is All You Need] (https://arxiv.org/pdf/1706.03762);
 - [Bootstrapping Conditional GANs For Video Game Level Generation] (https://arxiv.org/abs/1910.01603);
 - [Deep Learning of Neural Networks Using Genetic Algorithms] (https://ceur-ws.org/Vol-3312/paper13.pdf);
