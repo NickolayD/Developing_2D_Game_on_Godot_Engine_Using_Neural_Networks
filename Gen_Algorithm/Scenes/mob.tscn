@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvnheu1qg85aw"]
+
+[ext_resource type="Script" uid="uid://bxwllgxmybo60" path="res://Scripts/mob.gd" id="1_pv1hm"]
+[ext_resource type="Texture2D" uid="uid://d3rcayjfopqyw" path="res://Sprites/Mobs/Sprite-0002.png" id="2_uu8ge"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8qx6q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ge0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uu8ge")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mob" type="CharacterBody2D" groups=["mobs"]]
+collision_layer = 2
+input_pickable = true
+motion_mode = 1
+script = ExtResource("1_pv1hm")
+metadata/_edit_group_ = true
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8qx6q")
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2ge0c")

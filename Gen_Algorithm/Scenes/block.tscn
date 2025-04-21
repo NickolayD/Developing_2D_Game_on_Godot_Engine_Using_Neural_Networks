@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://x73eb1vgm77s"]
+
+[ext_resource type="Script" uid="uid://c1ur3ubfaksut" path="res://Scripts/block.gd" id="1_8o1l4"]
+[ext_resource type="Texture2D" uid="uid://pfgydyh55jvh" path="res://Sprites/Blocks/Blue_Block.png" id="2_c2iur"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xshr1"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjgyh"]
+size = Vector2(30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kx8gd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c2iur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="block" type="RigidBody2D"]
+disable_mode = 1
+collision_mask = 2
+mass = 4.001
+physics_material_override = SubResource("PhysicsMaterial_xshr1")
+gravity_scale = 0.0
+freeze = true
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_8o1l4")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mjgyh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kx8gd")
